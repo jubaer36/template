@@ -9,6 +9,8 @@ export default async function createUser(params: CreateUserParams) {
     try {
         await db.insert(users).values({
             clerkId,
+            userName: email.split('@')[0], // Assuming userName is derived from email
+            age:0, // Default age, adjust as necessary
             email,
             firstName,
             lastName,
