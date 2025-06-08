@@ -57,6 +57,8 @@ export async function POST(req: Request) {
 
     const user = {
       clerkId: id,
+      userName: email_addresses[0].email_address.split('@')[0], // Assuming userName is derived from email
+      age: 0, // Default age, adjust as necessary
       firstName: first_name!,
       lastName: last_name!,
       email: email_addresses[0].email_address,
